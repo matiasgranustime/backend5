@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Fornecedor = require('../models/Fornecedor');
+const Fornecedor = require('../models/fornecedor');
 
 // LISTAR E PESQUISAR FORNECEDORES
 router.get('/', async (req, res) => {

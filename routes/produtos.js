@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Produto = require('../models/Produto');
+const Produto = require('../models/produto');
 
 // LISTAR PRODUTOS E PESQUISAR
 router.get('/', async (req, res) => {

@@ -12,9 +12,9 @@ const app = express();
 const produtosRoutes = require('./routes/produtos');
 const categoriasRoutes = require('./routes/categorias');
 const fornecedoresRoutes = require('./routes/fornecedores');
-const Produto = require('./models/Produto');
-const Categoria = require('./models/Categoria');
-const Fornecedor = require('./models/Fornecedor');
+const Produto = require('./models/produto');
+const Categoria = require('./models/categoria');
+const Fornecedor = require('./models/fornecedor');
 
 // CONFIGURAÇÕES DO EXPRESS
 app.set('view engine', 'ejs');
