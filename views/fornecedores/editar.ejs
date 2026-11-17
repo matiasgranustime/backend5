@@ -1,0 +1,61 @@
+
+<%- include('../partials/header') %>
+
+<h2 class="mb-3">Editar Fornecedor</h2>
+
+<form action="/fornecedores/<%= fornecedor._id %>?_method=PUT" method="POST">
+
+    <div class="row">
+
+        <div class="col-md-8 mb-3">
+            <label class="form-label">Nome do fornecedor</label>
+            <input type="text" name="nome" class="form-control"
+                value="<%= fornecedor.nome %>" required>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label class="form-label">CNPJ</label>
+            <input type="text" name="cnpj" class="form-control"
+                value="<%= fornecedor.cnpj || '' %>">
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Telefone</label>
+            <input type="text" name="telefone" class="form-control"
+                value="<%= fornecedor.telefone || '' %>">
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label class="form-label">E-mail</label>
+            <input type="email" name="email" class="form-control"
+                value="<%= fornecedor.email || '' %>">
+        </div>
+
+        <div class="col-md-8 mb-3">
+            <label class="form-label">Endereço</label>
+            <input type="text" name="endereco" class="form-control"
+                value="<%= fornecedor.endereco || '' %>">
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Cidade</label>
+            <input type="text" name="cidade" class="form-control"
+                value="<%= fornecedor.cidade || '' %>">
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label class="form-label">Status</label>
+            <select name="status" class="form-select">
+                <option value="Ativo" <%= fornecedor.status === 'Ativo' ? 'selected' : '' %>>Ativo</option>
+                <option value="Inativo" <%= fornecedor.status === 'Inativo' ? 'selected' : '' %>>Inativo</option>
+            </select>
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+    <a href="/fornecedores" class="btn btn-secondary">Voltar</a>
+
+</form>
+
+<%- include('../partials/footer') %>

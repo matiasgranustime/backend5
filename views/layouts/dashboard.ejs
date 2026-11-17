@@ -1,0 +1,70 @@
+
+<%- include('../partials/header') %>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold">Dashboard</h2>
+        <p class="text-muted">Visão geral do seu estoque</p>
+    </div>
+    <span class="badge bg-primary fs-6">StockManager</span>
+</div>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Produtos cadastrados</h6>
+                <h2 class="fw-bold text-primary"><%= totalProdutos %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Categorias</h6>
+                <h2 class="fw-bold text-success"><%= totalCategorias %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Fornecedores</h6>
+                <h2 class="fw-bold text-info"><%= totalFornecedores %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Estoque baixo</h6>
+                <h2 class="fw-bold text-danger"><%= estoqueBaixo %></h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card shadow-sm border-0 mt-4">
+    <div class="card-body">
+        <h5 class="fw-bold mb-3">Acesso rápido</h5>
+
+        <a href="/produtos/novo" class="btn btn-primary me-2">
+            Cadastrar produto
+        </a>
+
+        <a href="/categorias/novo" class="btn btn-success me-2">
+            Nova categoria
+        </a>
+
+        <a href="/fornecedores/novo" class="btn btn-info text-white">
+            Novo fornecedor
+        </a>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

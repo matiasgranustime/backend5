@@ -1,0 +1,44 @@
+
+body {
+    background-color: #f5f6fa;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+h2 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.table {
+    background-color: white;
+    vertical-align: middle;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 40px;
+}
